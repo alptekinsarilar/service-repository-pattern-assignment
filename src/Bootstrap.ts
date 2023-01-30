@@ -7,3 +7,7 @@ import { UserController } from './User.controller'
 /* --- Do this as last! --- */
 
 // NOTE: Make sure to do a named export of your userController
+
+const repository = new UserRepository()
+const service = new UserService(repository)
+export const userController = new UserController(service)
