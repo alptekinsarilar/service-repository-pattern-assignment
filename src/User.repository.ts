@@ -4,7 +4,7 @@ import Database, { UserRequestDto } from './Database'
 export class UserRepository {
   public readonly db = Database
 
-  async createUser(username: string) {
-    return this.db.create(username)
+  async createUser(userData: UserRequestDto) {
+    return this.db.create(userData)
   }
 }
